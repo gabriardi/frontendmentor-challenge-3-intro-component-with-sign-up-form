@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+::-moz-selection {
+  background-color: #38cc8c;
+  color: #fff;
+}
+
+::selection {
+  background-color: #38cc8c;
+  color: #fff;
+}
+
+.container {
+  background: url(../images/bg-intro-desktop.png), #ff7a7a;
+  margin: 0 auto;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 7rem;
+          column-gap: 7rem;
+  padding: 0 10%;
+  overflow: scroll;
+}
+
+@media only screen and (max-width: 75em) {
+  .container {
+    height: unset;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .container {
+    background: url(../images/bg-intro-desktop.png), #ff7a7a;
+    padding: 0 6%;
+  }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 5rem;
+}
+
+@media only screen and (max-width: 40em) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.heading {
+  color: #fff;
+}
+
+@media only screen and (max-width: 75em) {
+  .heading {
+    text-align: center;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    margin-top: 7.5rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.heading__paragraph {
+  margin-top: 4rem;
+}
+
+.cta__form {
+  padding: 3.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0.7rem 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.7rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.cta__form__btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  padding: 2rem 4rem;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.cta__form__btn--primary {
+  text-transform: uppercase;
+  background: #38cc8c;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0.4rem 0 0 #30bb7f;
+          box-shadow: 0 0.4rem 0 0 #30bb7f;
+}
+
+.cta__form__btn--primary:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), #38cc8c;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #38cc8c;
+  -webkit-box-shadow: 0 0.4rem 0 0 #75dbaf;
+          box-shadow: 0 0.4rem 0 0 #75dbaf;
+}
+
+.cta__form__btn--primary:active {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  -webkit-transform: translateY(0.4rem);
+          transform: translateY(0.4rem);
+}
+
+.cta__form__btn--secondary {
+  -webkit-box-shadow: 0 0.7rem 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.7rem 0 rgba(0, 0, 0, 0.15);
+  background-color: #6055a5;
+}
+
+.cta__form__btn--secondary span {
+  font-weight: 600;
+}
+
+.cta__form__input-group {
+  position: relative;
+}
+
+.cta__form__input {
+  outline: none;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 600;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  margin: 0 0 2rem;
+  display: block;
+  border: 1px solid gainsboro;
+}
+
+.cta__form__input:focus {
+  border-color: #6055a5;
+}
+
+.cta__form__input--error, .cta__form__input--error:focus {
+  border: 2px solid #ff7a7a;
+  color: #ff7a7a;
+}
+
+.cta__form__error-text {
+  position: relative;
+  text-align: right;
+  top: -1.5rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #ff7a7a;
+  margin-bottom: 0.5rem;
+  display: none;
+}
+
+.cta__form__error-icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 5%;
+  display: none;
+}
+
+.cta__form__terms {
+  padding: 1.8rem 0 0.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #b9b6d3;
+  display: block;
+}
+
+.cta__form__terms a {
+  text-decoration: none;
+  color: #ff7a7a;
+  font-weight: 600;
+}
+
+.show-error {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+::selection {
+  background-color: $color-primary-green;
+  color: #fff;
+}
+
+.container {
+  background: url(../images/bg-intro-desktop.png), rgba($color-primary-red, 1);
+  margin: 0 auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 7rem;
+  padding: 0 10%;
+  overflow: scroll;
+
+  @media only screen and (max-width: $bp-medium) {
+    height: unset;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: unset;
+  }
+  @media only screen and (max-width: $bp-small) {
+    background: url(../images/bg-intro-desktop.png), rgba($color-primary-red, 1);
+    padding: 0 6%;
+  }
+}

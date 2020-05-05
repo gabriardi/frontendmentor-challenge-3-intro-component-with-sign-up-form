@@ -1,0 +1,106 @@
+.cta {
+  &__form {
+    padding: 3.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+    background-color: #fff;
+    border-radius: $border-radius-big;
+    @include box-shadow-hard;
+    &__btn {
+      cursor: pointer;
+      outline: none;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      width: 100%;
+      padding: 2rem 4rem;
+      color: #fff;
+      border-radius: $border-radius-big;
+      &--primary {
+        text-transform: uppercase;
+        background: $color-primary-green;
+        border-radius: $border-radius-small;
+        box-shadow: 0 0.4rem 0 0 darken($color-primary-green, 5);
+
+        &:hover {
+          background: linear-gradient(rgba(#fff, 0.5), rgba(#fff, 0.5)),
+            $color-primary-green;
+          box-shadow: 0 0.4rem 0 0 lighten($color-primary-green, 15);
+        }
+        &:active {
+          box-shadow: unset;
+          transform: translateY(0.4rem);
+        }
+      }
+      &--secondary {
+        @include box-shadow-hard;
+        span {
+          font-weight: 600;
+        }
+        background-color: $color-accent;
+      }
+    }
+
+    &__input-group {
+      position: relative;
+    }
+    &__input {
+      outline: none;
+      border-radius: $border-radius-small;
+      font-family: inherit;
+      font-size: 1.4rem;
+      font-weight: 600;
+      width: 100%;
+      padding: 1.5rem 3rem;
+      margin: 0 0 2rem;
+      display: block;
+      border: 1px solid gainsboro;
+
+      &:focus {
+        border-color: $color-accent;
+      }
+
+      &--error,
+      &--error:focus {
+        border: 2px solid $color-primary-red;
+        color: $color-primary-red;
+      }
+    }
+
+    &__error-text {
+      position: relative;
+      text-align: right;
+      top: -1.5rem;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: $color-primary-red;
+      margin-bottom: 0.5rem;
+      display: none;
+    }
+
+    &__error-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 5%;
+      display: none;
+    }
+
+    &__terms {
+      padding: 1.8rem 0 0.5rem;
+      text-align: center;
+      font-size: 1.1rem;
+      color: $color-neutral-light;
+      display: block;
+      a {
+        text-decoration: none;
+        color: $color-primary-red;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.show-error {
+  display: block;
+}
