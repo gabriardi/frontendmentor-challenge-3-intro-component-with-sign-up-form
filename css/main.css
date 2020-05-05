@@ -112,12 +112,12 @@ h1 {
   font-family: inherit;
   font-size: inherit;
   width: 100%;
-  padding: 2rem 4rem;
   color: #fff;
   border-radius: 1rem;
 }
 
 .cta__form__btn--primary {
+  padding: 2rem 0rem;
   text-transform: uppercase;
   background: #38cc8c;
   border-radius: 0.5rem;
@@ -140,6 +140,7 @@ h1 {
 }
 
 .cta__form__btn--secondary {
+  padding: 2rem 5.5rem;
   -webkit-box-shadow: 0 0.7rem 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 0.7rem 0 rgba(0, 0, 0, 0.15);
   background-color: #6055a5;

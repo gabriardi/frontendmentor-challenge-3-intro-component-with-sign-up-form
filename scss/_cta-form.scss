@@ -13,10 +13,10 @@
       font-family: inherit;
       font-size: inherit;
       width: 100%;
-      padding: 2rem 4rem;
       color: #fff;
       border-radius: $border-radius-big;
       &--primary {
+        padding: 2rem 0rem;
         text-transform: uppercase;
         background: $color-primary-green;
         border-radius: $border-radius-small;
@@ -33,6 +33,7 @@
         }
       }
       &--secondary {
+        padding: 2rem 5.5rem;
         @include box-shadow-hard;
         span {
           font-weight: 600;
